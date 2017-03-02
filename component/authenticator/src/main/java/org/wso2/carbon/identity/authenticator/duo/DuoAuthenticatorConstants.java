@@ -40,6 +40,7 @@ public abstract class DuoAuthenticatorConstants {
     public static final String DUO_USERNAME = "username";
     public static final String DEFAULT_USER_IDENTIFIER = "username";
     public static final String DUO_PHONES = "phones";
+    public static final String DUO_PAGE_KEY = "DuoPage";
     public static final String DUO_PAGE = "duoauthenticationendpoint/duoAuth.jsp";
     public static final String DUO_ERROR_PAGE = "duoauthenticationendpoint/duoError.jsp";
     public static final String ENABLE_MOBILE_VERIFICATION = "EnableMobileVerification";

@@ -70,6 +70,7 @@ public class DuoAuthenticator extends AbstractApplicationAuthenticator implement
                                                  AuthenticationContext context)
             throws AuthenticationFailedException {
         Map<String, String> authenticatorProperties = context.getAuthenticatorProperties();
+        Map<String, String> duoParameters = getAuthenticatorConfig().getParameterMap();
         URLEncoder encoder = new URLEncoder();
         String integrationSecretKey = DuoAuthenticatorConstants.stringGenerator();
         String username = getLocalAuthenticatedUser(context);
@@ -84,7 +85,11 @@ public class DuoAuthenticator extends AbstractApplicationAuthenticator implement
             String sig_request = DuoWeb.signRequest(authenticatorProperties.get
                     (DuoAuthenticatorConstants.INTEGRATION_KEY), authenticatorProperties.get
                     (DuoAuthenticatorConstants.SECRET_KEY), integrationSecretKey, tenantAwareUsername);
-            String enrollmentPage = DuoAuthenticatorConstants.DUO_PAGE + "?" + FrameworkConstants.RequestParams.AUTHENTICATOR +
+            String duoPage = duoParameters.get(DuoAuthenticatorConstants.DUO_PAGE_KEY);
+            if (duoPage == null) {
+                duoPage = DuoAuthenticatorConstants.DUO_PAGE;
+            }
+            String enrollmentPage = duoPage + "?" + FrameworkConstants.RequestParams.AUTHENTICATOR +
                     "=" + encoder.encode(getName() + ":" + FrameworkConstants.LOCAL_IDP_NAME) + "&" +
                     FrameworkConstants.RequestParams.TYPE + "=" +
                     DuoAuthenticatorConstants.RequestParams.DUO + "&" +
