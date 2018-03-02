@@ -40,7 +40,7 @@
             <header>
                 <div class="row">
                     <div class="col-sm-4">
-                        <img src="/denisonAuthEndpoint/images/du_logo.png" alt="Denison University SSO" title="Denison University SSO" class="img-responsive logo">
+                        <img src="/denisonAuthEndpoint/images/denison-university-wordmark-red.svg" alt="Denison University SSO" title="Denison University SSO" class="img-responsive logo">
                     </div>
                     <div class="col-sm-8"></div>
                 </div>
