@@ -49,9 +49,9 @@
                 <div class="panel-body text-center">
                     <div class="alert alert-info text-left" role="alert">
                         <p>
-                            As of July 31st 2018, Denison account-holders are required to use Duo Two-Factor
+                            Denison account-holders are required to use Duo Two-Factor
                             Authentication to approve logins. If you see "Start Setup" below, you must enroll in Duo.
-                            For more information view our <a href="http://apps.denison.edu/helpdesk/faq6242">Helpdesk FAQ</a>.
+                            For more information view this <a href="http://apps.denison.edu/helpdesk/faq6242">ITS Help Desk Online FAQ</a>.
                         </p>
                     </div>
                      <iframe id="duo_iframe"
